@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#ffb4a7",
+                    "outline-variant": "#ddc0bb",
+                    "surface-bright": "#fbf9f5",
+                    "tertiary-fixed": "#8ef5dd",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#71d8c1",
+                    "secondary": "#496455",
+                    "on-background": "#1b1c1a",
+                    "surface-container": "#efeeea",
+                    "surface-container-low": "#f5f3ef",
+                    "on-tertiary-container": "#f4fffa",
+                    "primary-fixed": "#ffdad4",
+                    "tertiary-container": "#008470",
+                    "background": "#fbf9f5",
+                    "on-tertiary-fixed": "#00201a",
+                    "on-secondary-fixed": "#062014",
+                    "surface": "#fbf9f5",
+                    "on-tertiary-fixed-variant": "#005144",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#ffb4a7",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f0ed",
+                    "surface-tint": "#a03f30",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#b0cdbb",
+                    "surface-container-high": "#eae8e4",
+                    "on-primary-fixed-variant": "#80281b",
+                    "on-surface": "#1b1c1a",
+                    "primary-container": "#bd5444",
+                    "secondary-container": "#ccead6",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#9d3d2e",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#400200",
+                    "on-surface-variant": "#56423e",
+                    "tertiary": "#006858",
+                    "secondary-fixed": "#ccead6",
+                    "outline": "#89726d",
+                    "inverse-surface": "#30312e",
+                    "surface-dim": "#dbdad6",
+                    "on-secondary-fixed-variant": "#324c3e",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-container": "#fffbff",
+                    "on-secondary-container": "#4f6a5b",
+                    "surface-variant": "#e4e2de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-editorial-kerning {
+            letter-spacing: -0.02em;
+        }
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-md dark:bg-stone-900/80">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#9d3d2e] dark:text-orange-400">
+                Rise Again
+            </div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="text-[#9d3d2e] dark:text-orange-300 font-bold border-b-2 border-[#9d3d2e] pb-1 hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Reflect</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Tools</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Community</a>
+</div>
+<button class="uppercase tracking-wider text-[0.75rem] font-label text-stone-600 border border-outline-variant/30 px-5 py-2 rounded-full hover:bg-surface-container-high transition-colors">
+                Help
+            </button>
+</div>
+</nav>
+<main class="relative min-h-screen pt-24 overflow-hidden">
+<!-- Abstract Watercolor Background -->
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] right-[-5%] w-[60%] h-[80%] rounded-full opacity-20 bg-gradient-to-br from-primary to-transparent blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[50%] h-[70%] rounded-full opacity-15 bg-gradient-to-tr from-secondary to-transparent blur-[100px]"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-40 mix-blend-multiply" data-alt="soft abstract watercolor painting with gentle washes of terracotta, cream, and sage green, textured paper effect, ethereal and grounding mood" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwXwenOvNn51S8tYQseovaMGW_Wva6pOzsKCGNMNurWcBU1L0JZJS0pXurgutoxkr9oJien6QSUUHcnZqqtZt68NS3DckMKNTN1GUq7qs685XkptZTmAaGCkQGhgB9xxU_VAYkqbxs8LDTziwIYkZ0t8kj7GAk5iVvGkX0n41uBaCkpbIxdCrybQgb3FTvEQx9xs-nHcmy1ia4721MfdLwPuwF1SmprxqX6NiBoxEdJ-ymnOFFO-zLmpTVsbF20zftTCN4FPfzoyQ'); background-size: cover; background-position: center;">
+</div>
+<div class="texture-overlay absolute inset-0"></div>
+</div>
+<!-- Hero Content Section -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<span class="inline-block label-md uppercase tracking-wider text-on-surface-variant mb-6 bg-surface-container-low px-4 py-1.5 rounded-full border border-outline-variant/10">
+                    A Living Archive for Resilience
+                </span>
+<h1 class="font-headline text-6xl md:text-8xl leading-[0.95] text-on-surface text-editorial-kerning mb-8">
+                    Failing Doesn't <br/>
+<span class="italic text-primary">Mean You're</span> <br/>
+                    Failing.
+                </h1>
+<div class="lg:pl-12 border-l-2 border-primary/20">
+<p class="font-body text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mb-12">
+                        Academic pressure can be heavy, but a setback is just a chapter, not the whole book. We provide the tools to archive your experiences, find quietude, and grow through the friction.
+                    </p>
+<div class="flex flex-wrap gap-6 items-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-body font-bold text-lg shadow-xl shadow-primary/10 hover:opacity-90 transition-all transform hover:-translate-y-0.5 active:scale-95">
+                            Start Your Reflection
+                        </button>
+<button class="text-primary font-body font-bold text-lg flex items-center gap-2 group">
+<span>Browse the Library</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Side Card (Asymmetric Layout) -->
+<div class="lg:col-span-4 mt-12 lg:mt-0">
+<div class="bg-surface-container-lowest/60 backdrop-blur-sm p-8 rounded-xl border border-outline-variant/10 shadow-lg transform rotate-2">
+<div class="flex items-start gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<div>
+<p class="label-md uppercase tracking-tighter text-on-surface-variant mb-1">Today's Prompt</p>
+<h3 class="font-headline text-2xl">What did a mistake teach you this week?</h3>
+</div>
+</div>
+<p class="font-body text-sm text-on-surface-variant mb-6 leading-relaxed">
+                        Join 2,400+ students documenting their journey today.
+                    </p>
+<div class="flex -space-x-3 mb-6">
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="portrait of a young student smiling softly, natural lighting, academic setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE1tFnVS-YTTMf9jmdAHcy1eiycFpQwMitnRFCpr0Xf_EFY2XxoXD4KcPyqOS3dQrr6ldiAQRxpGDBlGUtK5uIz0i_3vO4i7wvjRFuGVAG3A6eOXP1EpWrEwWZCbHpvh2_E0e83KT0NEDQ7w66tm12s5EKqjkVI8l5-R3RIDRezBLQ7CX3YWv-1FpiawEKgK-_dbBEOydnYGFnhSJS-cK8BcjzMHTMGMZVO6VpBysV3MLG4jtGBMtsy7fekY3t4UC0FDmiH9qlB8w"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="close up headshot of a person with glasses, thoughtful expression, warm sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl7ZsmRWdVrSUMJQDCVbI2qy4N9b3u6-ggSPgOMp8PoCF3vWvdX6bdPRpye6uPpo0e_hiGYiktqwbZVVfILMcDIrVU7RNI3TqaG8FkNrBR9ZA_DnDiPAJPsb0FX8e11umVYyZgpr4G8n739ILoBEF5-fs7btpNL3KOjMjvciK_GBZiXWO3GH1i6xJaVgRxTHOSPsHlCJ55uDtcMl42N0a7lYxzBirBrQVYbh2y6fOaRKITJPSvsdgL9BAyawz8qlmQ9nUCIYB5UDA"/>
+<img class="w-10 h-10 rounded-full border-2 border-surface" data-alt="smiling student in a cozy library setting, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLG4-qE7v4SCzIZPQ_EIZUjVzrcEEUJrf2QdJcRMihVRTcrdWB8QyWLbbyu8Ds2sUchkkanghuWgjn88vwaskDV98YfsCS1PdhFM3VWpVC6r3uUf3apAZ09k2L0LDfrrM_CvISO1fXMd2ITVMuill_xDH7yA5HrkpEeqKT1o126MC_PFvWh0ZgDSq2-KkS5l51vhEsIOdDbmgHqMpFkUiQEsdZhIGtEhTltwpLQZvn14AM-iF81nmI-dI_oL_7MC1v17148dGCk48"/>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<button class="w-full py-3 bg-secondary/10 text-secondary rounded-lg font-bold hover:bg-secondary/20 transition-colors">
+                        Write Anonymously
+                    </button>
+</div>
+</div>
+</section>
+<!-- Featured Section (Bento Style) -->
+<section class="relative z-10 max-w-7xl mx-auto px-8 py-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">psychology</span>
+<h3 class="font-headline text-4xl mb-4">The Resilience Toolkit</h3>
+<p class="font-body text-on-surface-variant max-w-md">Science-backed strategies to navigate academic burnout and reclaim your momentum.</p>
+</div>
+<div class="mt-12 flex items-center justify-between">
+<span class="font-label uppercase tracking-widest text-xs">Curated by mentors</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</div>
+</div>
+<div class="bg-secondary text-on-secondary rounded-xl p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">spa</span>
+<h3 class="font-headline text-3xl mb-4">Quiet Library</h3>
+<p class="opacity-80">Ambient soundscapes and guided meditations for high-stress periods.</p>
+</div>
+<button class="mt-8 py-3 px-6 bg-white/10 hover:bg-white/20 rounded-lg text-sm font-bold backdrop-blur-md">
+                        Enter Library
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto py-12 px-8 bg-stone-100 dark:bg-stone-950">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-stone-200/20 pt-8">
+<div class="font-serif text-lg text-stone-800 dark:text-stone-200">
+                Rise Again
+            </div>
+<div class="flex flex-wrap justify-center gap-8 font-sans text-sm tracking-tight">
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30 transition-all" href="#">Crisis Support</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30 transition-all" href="#">Academic Advocacy</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30 transition-all" href="#">Privacy Journal</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30 transition-all" href="#">Contact Mentor</a>
+</div>
+<div class="font-sans text-xs text-stone-500">
+                © 2024 Rise Again. A Living Archive for Student Resilience.
+            </div>
+</div>
+</footer>
+</body></html>
