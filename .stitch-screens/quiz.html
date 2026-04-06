@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "inverse-primary": "#ffb4a7",
+                  "outline-variant": "#ddc0bb",
+                  "surface-bright": "#fbf9f5",
+                  "tertiary-fixed": "#8ef5dd",
+                  "error-container": "#ffdad6",
+                  "tertiary-fixed-dim": "#71d8c1",
+                  "secondary": "#496455",
+                  "on-background": "#1b1c1a",
+                  "surface-container": "#efeeea",
+                  "surface-container-low": "#f5f3ef",
+                  "on-tertiary-container": "#f4fffa",
+                  "primary-fixed": "#ffdad4",
+                  "tertiary-container": "#008470",
+                  "background": "#fbf9f5",
+                  "on-tertiary-fixed": "#00201a",
+                  "on-secondary-fixed": "#062014",
+                  "surface": "#fbf9f5",
+                  "on-tertiary-fixed-variant": "#005144",
+                  "on-error-container": "#93000a",
+                  "primary-fixed-dim": "#ffb4a7",
+                  "error": "#ba1a1a",
+                  "on-error": "#ffffff",
+                  "inverse-on-surface": "#f2f0ed",
+                  "surface-tint": "#a03f30",
+                  "on-tertiary": "#ffffff",
+                  "secondary-fixed-dim": "#b0cdbb",
+                  "surface-container-high": "#eae8e4",
+                  "on-primary-fixed-variant": "#80281b",
+                  "on-surface": "#1b1c1a",
+                  "primary-container": "#bd5444",
+                  "secondary-container": "#ccead6",
+                  "surface-container-lowest": "#ffffff",
+                  "primary": "#9d3d2e",
+                  "on-primary": "#ffffff",
+                  "on-secondary": "#ffffff",
+                  "on-primary-fixed": "#400200",
+                  "on-surface-variant": "#56423e",
+                  "tertiary": "#006858",
+                  "secondary-fixed": "#ccead6",
+                  "outline": "#89726d",
+                  "inverse-surface": "#30312e",
+                  "surface-dim": "#dbdad6",
+                  "on-secondary-fixed-variant": "#324c3e",
+                  "surface-container-highest": "#e4e2de",
+                  "on-primary-container": "#fffbff",
+                  "on-secondary-container": "#4f6a5b",
+                  "surface-variant": "#e4e2de"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Newsreader", "serif"],
+                  "body": ["Manrope", "sans-serif"],
+                  "label": ["Manrope", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      font-size: 2rem;
+    }
+    .asymmetric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .botanical-shadow {
+      box-shadow: 0px 12px 32px rgba(86, 66, 62, 0.06);
+    }
+    .glass-nav {
+      backdrop-filter: blur(12px);
+    }
+    .newsreader-italic {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Implementation from JSON -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-md dark:bg-stone-900/80">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-serif italic text-[#9d3d2e] dark:text-orange-400">
+        Rise Again
+      </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#9d3d2e] dark:text-orange-300 font-bold border-b-2 border-[#9d3d2e] pb-1 hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Reflect</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Tools</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-[#496455] dark:hover:text-emerald-400 transition-colors duration-300" href="#">Community</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-label uppercase tracking-wider hover:opacity-80 transition-opacity">
+        Help
+      </button>
+</div>
+</nav>
+<main class="min-h-screen pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-16 md:mb-24">
+<p class="label-md uppercase tracking-[0.2em] text-on-surface-variant mb-4 font-label text-[0.75rem]">Personal Audit</p>
+<h1 class="text-5xl md:text-7xl font-headline font-medium text-on-surface leading-tight tracking-tight max-w-3xl">
+        What's weighing on you today?
+      </h1>
+<div class="mt-8 h-px w-24 bg-primary/20"></div>
+</header>
+<!-- Quiz Content: Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Instructional Sidebar (The Marginalia) -->
+<aside class="lg:col-span-3 lg:pt-4 text-on-surface-variant italic font-headline text-lg border-l border-outline-variant/20 pl-6 order-2 lg:order-1">
+        Take a breath. Identifying the shape of your struggle is the first step toward transforming it into wisdom. Select the path that resonates most with your current experience.
+      </aside>
+<!-- Interactive Card Grid -->
+<section class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-8 order-1 lg:order-2">
+<!-- Option 1: Exam Failure -->
+<button class="group relative flex flex-col text-left p-10 bg-surface-container-lowest rounded-xl botanical-shadow transition-all duration-500 hover:-translate-y-2 ring-1 ring-outline-variant/10 hover:ring-primary/20">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-8 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="text-2xl font-headline font-semibold text-on-surface mb-3">Exam Failure</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">The weight of numbers and grades. A temporary setback in a long academic journey.</p>
+<div class="mt-8 flex items-center text-primary font-label text-[0.75rem] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+            Select Path <span class="material-symbols-outlined ml-2 !text-[1rem]">arrow_forward</span>
+</div>
+</button>
+<!-- Option 2: Project Rejection -->
+<button class="group relative flex flex-col text-left p-10 bg-surface-container-low rounded-xl botanical-shadow transition-all duration-500 hover:-translate-y-2 ring-1 ring-outline-variant/10 hover:ring-primary/20">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-8 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="close_fullscreen">close_fullscreen</span>
+</div>
+<h3 class="text-2xl font-headline font-semibold text-on-surface mb-3">Project Rejection</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">When your effort didn't find its home. This is where creative resilience begins.</p>
+<div class="mt-8 flex items-center text-primary font-label text-[0.75rem] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+            Select Path <span class="material-symbols-outlined ml-2 !text-[1rem]">arrow_forward</span>
+</div>
+</button>
+<!-- Option 3: Dropped Course -->
+<button class="group relative flex flex-col text-left p-10 bg-surface-container-low rounded-xl botanical-shadow transition-all duration-500 hover:-translate-y-2 ring-1 ring-outline-variant/10 hover:ring-primary/20">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-8 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="direction_off">directions_off</span>
+</div>
+<h3 class="text-2xl font-headline font-semibold text-on-surface mb-3">Dropped Course</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">The difficult choice to let go. Pivot points are often the start of better directions.</p>
+<div class="mt-8 flex items-center text-primary font-label text-[0.75rem] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+            Select Path <span class="material-symbols-outlined ml-2 !text-[1rem]">arrow_forward</span>
+</div>
+</button>
+<!-- Option 4: Lost Motivation -->
+<button class="group relative flex flex-col text-left p-10 bg-surface-container-lowest rounded-xl botanical-shadow transition-all duration-500 hover:-translate-y-2 ring-1 ring-outline-variant/10 hover:ring-primary/20">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-8 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined" data-icon="filter_drama">filter_drama</span>
+</div>
+<h3 class="text-2xl font-headline font-semibold text-on-surface mb-3">Lost Motivation</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">Finding yourself in the quiet fog. A time for rest and recalibration of purpose.</p>
+<div class="mt-8 flex items-center text-primary font-label text-[0.75rem] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+            Select Path <span class="material-symbols-outlined ml-2 !text-[1rem]">arrow_forward</span>
+</div>
+</button>
+</section>
+</div>
+<!-- Background Illustration Detail -->
+<div class="mt-24 w-full h-[400px] rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale opacity-20 contrast-125" data-alt="Moody still life of an open leather-bound journal and a ceramic mug on a wooden desk with soft morning sunlight and dust motes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqjhs9LcPSBE4g6iXF_OlzV07boxjs_mtAkmjmaX0ORbwQ5UNDTcb5s26K39lFg9_9egjKKo0EfqtH2K5AfA9LrG54e8QoLSjZ2D2HDx3aA8IEFfqKnKkckJilk3JeJezDHpLvkCNeHo9eBtEHQZOFc5wvDkazM4x9lpo18q5Kw6DImrZw9gqoUsCm9gQoxasvU2HOIxJ-YkeINKejzoj28Odtdhiya_Zyz7eQLrpLNcaTf-kpBUzjlpVIfjldAhqIh8Uk80eKqzQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-12 left-12 max-w-md">
+<p class="text-on-surface-variant font-headline italic text-2xl">"Failure is the condiment that gives success its flavor."</p>
+<p class="font-label text-[0.7rem] uppercase tracking-widest mt-4 text-primary">— Truman Capote</p>
+</div>
+</div>
+</main>
+<!-- Footer Implementation from JSON -->
+<footer class="w-full mt-auto py-12 px-8 bg-stone-100 dark:bg-stone-950 border-t border-stone-200/20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="font-serif text-lg text-stone-800 dark:text-stone-200">
+        Rise Again
+      </div>
+<div class="flex flex-wrap justify-center gap-8 font-sans text-sm tracking-tight">
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30" href="#">Crisis Support</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30" href="#">Academic Advocacy</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30" href="#">Privacy Journal</a>
+<a class="text-stone-500 hover:text-stone-800 dark:hover:text-stone-200 hover:underline decoration-[#9d3d2e]/30" href="#">Contact Mentor</a>
+</div>
+<div class="text-stone-500 dark:text-stone-400 font-sans text-[0.75rem]">
+        © 2024 Rise Again. A Living Archive for Student Resilience.
+      </div>
+</div>
+</footer>
+</body></html>

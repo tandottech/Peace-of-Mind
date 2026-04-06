@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  name          String?
+  createdAt      DateTime       @default(now())
+  quizResults    QuizResult[]
+  reframeEntries ReframeEntry[]
+  reflections    Reflection[]
+  tasks          Task[]
+}
+
+model Strategy {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  quote       String?
+  category    String
+  createdAt   DateTime @default(now())
+}
+
+model QuizResult {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  path      String
+  createdAt DateTime @default(now())
+}
+
+model ReframeEntry {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  prompt      String
+  aiResponse  String
+  tags        String
+  createdAt   DateTime @default(now())
+}
+
+model Reflection {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  text      String
+  mood      String
+  createdAt DateTime @default(now())
+}
+
+model Task {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  title       String
+  isUrgent    Boolean  @default(false)
+  isCompleted Boolean  @default(false)
+  duration    String?
+  createdAt   DateTime @default(now())
+}
