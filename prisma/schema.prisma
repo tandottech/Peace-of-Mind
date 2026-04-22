@@ -7,9 +7,10 @@ datasource db {
 }
 
 model User {
-  id            String         @id @default(cuid())
-  email         String         @unique
-  name          String?
+  id             String         @id @default(cuid())
+  email          String         @unique
+  name           String?
+  password       String?
   createdAt      DateTime       @default(now())
   quizResults    QuizResult[]
   reframeEntries ReframeEntry[]
@@ -54,12 +55,13 @@ model Reflection {
 }
 
 model Task {
-  id          String   @id @default(cuid())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
+  id          String    @id @default(cuid())
+  userId      String?
+  user        User?     @relation(fields: [userId], references: [id])
   title       String
-  isUrgent    Boolean  @default(false)
-  isCompleted Boolean  @default(false)
+  status      String    @default("STARTED")
+  isUrgent    Boolean   @default(false)
   duration    String?
-  createdAt   DateTime @default(now())
+  targetDate  DateTime?
+  createdAt   DateTime  @default(now())
 }

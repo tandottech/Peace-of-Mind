@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import BottomNav from "@/components/BottomNav";
+import AppShell from "@/components/AppShell";
 
 export const metadata: Metadata = {
   title: "Rise Again | Student Resilience",
@@ -30,12 +30,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-stone-50 text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed antialiased min-h-screen flex justify-center">
-        {/* Mobile App Container */}
-        <div className="relative w-full max-w-md min-h-screen bg-gradient-to-br from-[#fbf9f5] via-[#e5efdf] to-[#99c9a6] shadow-2xl overflow-x-hidden">
-          {children}
-          <BottomNav />
-        </div>
+      <body className="bg-gradient-to-br from-[#fbf9f5] via-[#e5efdf] to-[#99c9a6] text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed antialiased min-h-screen">
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
