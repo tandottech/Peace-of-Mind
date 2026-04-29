@@ -169,21 +169,27 @@ export default function FocusRoom() {
           </section>
 
           {/* AI Spotify Embed */}
-          <section className="w-full relative z-10">
-            <div className="bg-[#f0f4ea]/80 rounded-[2rem] p-6 border border-white/50 backdrop-blur-md shadow-[0_8px_32px_rgba(45,71,57,0.05)]">
-               <h3 className="text-xs uppercase tracking-widest text-[#56423e]/80 font-bold mb-4 flex items-center gap-1.5">
-                 <span className="material-symbols-outlined text-[1.1rem]">auto_awesome</span>
-                 Environment • {ambientType} 
-               </h3>
-               <div className="w-full h-[152px] rounded-2xl overflow-hidden shadow-sm border border-white/40 opacity-90 hover:opacity-100 transition-opacity">
+          <section className="w-full relative z-10 mt-8">
+            <div className="bg-[#fcfaf7]/90 rounded-[2.5rem] p-8 border border-white/60 backdrop-blur-xl shadow-[0_12px_40px_rgba(45,71,57,0.08)] transition-all hover:shadow-[0_16px_50px_rgba(45,71,57,0.12)]">
+               <div className="flex justify-between items-center mb-6">
+                 <h3 className="text-sm uppercase tracking-widest text-[#56423e]/90 font-bold flex items-center gap-2">
+                   <span className="material-symbols-outlined text-[1.3rem] text-[#649175]">auto_awesome</span>
+                   Environment • {ambientType} 
+                 </h3>
+                 <div className="flex items-center gap-2 text-[#1db954]">
+                    <span className="text-xs font-bold tracking-widest uppercase opacity-80">Spotify</span>
+                    <span className="material-symbols-outlined text-2xl">graphic_eq</span>
+                 </div>
+               </div>
+               <div className="w-full h-[352px] rounded-3xl overflow-hidden shadow-inner border border-black/5 bg-[#121212] flex items-center justify-center relative">
                  <iframe 
                    src={`https://open.spotify.com/embed/playlist/${playlistId}?utm_source=generator&theme=0`} 
                    width="100%" 
-                   height="152" 
+                   height="352" 
                    frameBorder="0" 
                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                    loading="lazy"
-                   className="rounded-xl"
+                   className="absolute inset-0"
                  ></iframe>
                </div>
             </div>

@@ -117,7 +117,7 @@ export default function Home() {
           {/* Greeting Title */}
           <section className="mb-10">
             <h1 className="font-serif text-[3.5rem] mb-3 text-[#2D4739] leading-tight">
-              How are you feeling, <br /> Jamie?
+              How are you feeling, <br /> Tanish?
             </h1>
             <p className="text-[#56423e] text-lg opacity-90 font-medium">
               Take a moment to check in with yourself.
